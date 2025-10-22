@@ -2,15 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Application\Bootloaders;
+namespace Application\Bootstrappers;
 
 use DI\Container;
 use Psr\Container\ContainerInterface;
 
-final readonly class ContainerBootloader
+final readonly class ContainerBootstrapper
 {
-    public static function createContainer(): ContainerInterface
+    public static function createContainer(array $providers): ContainerInterface
     {
-        return new Container();
+        return new Container(
+            $providers
+        );
     }
 }

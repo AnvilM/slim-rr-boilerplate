@@ -4,16 +4,25 @@ declare(strict_types=1);
 
 namespace Application\Bootstrappers;
 
-use Psr\Http\Message\RequestInterface;
-use Psr\Http\Message\ResponseInterface;
+use Application\Endpoints\ApiEndpoints;
+use Application\Endpoints\EndpointInterface;
 use Slim\App;
 
-final readonly class RoutesBootstrapper
+final class EndpointsBootstrapper
 {
-    public function createRoutes(App $app): void
+
+    /**
+     * @var EndpointInterface[]
+     */
+    private static array $endpoints = [
+        ApiEndpoints::class
+    ];
+    
+
+    public static function registerEndpoints(App $app): void
     {
-        $app->get('/', function (RequestInterface $request, ResponseInterface $response) {
-            $response->getBody()->write('aboba');
-        });
+        foreach (self::$endpoints as $endpoint) {
+            $endpoint::register($app);
+        }
     }
 }
