@@ -6,5 +6,5 @@ namespace Application\Providers;
 
 interface ProviderInterface
 {
-
+    public static function register(): array;
 }
