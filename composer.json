@@ -26,7 +26,8 @@
     "nyholm/psr7-server": "^1.1",
     "cycle/orm": "^2.11",
     "cycle/migrations": "^4.2",
-    "symfony/console": "^7.3"
+    "symfony/console": "^7.3",
+    "spiral/roadrunner-http": "^3.6"
   },
   "require-dev": {
     "phpunit/phpunit": "^12.4",
