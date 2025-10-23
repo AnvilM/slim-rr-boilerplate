@@ -2,10 +2,9 @@
 
 declare(strict_types=1);
 
-use Application\Bootstrappers\ProvidersBootstrapper;
+use Application\Kernel;
 
 require __DIR__ . '/vendor/autoload.php';
-
 echo '<pre>';
 
-print_r(ProvidersBootstrapper::getProviders());
+Kernel::createApp()->run(); 
