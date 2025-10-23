@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Application\Bootstrappers;
 
 
+use Application\Providers\ApplicationProviders\DBALProvider;
 use Application\Providers\ApplicationProviders\LoggerProvider;
 
 final class ProvidersBootstrapper
@@ -15,7 +16,8 @@ final class ProvidersBootstrapper
 
 
     private static array $appProviders = [
-        LoggerProvider::class
+        LoggerProvider::class,
+        DBALProvider::class
     ];
 
 
