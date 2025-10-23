@@ -8,6 +8,13 @@ use Application\Config\ApplicationConfig\ApplicationConfig;
 
 final readonly class MigrationConfig
 {
+    /**
+     * @return array{
+     *     directory:string,
+     *     table:string,
+     *     safe:bool
+     * }
+     */
     public static function config(): array
     {
         return [

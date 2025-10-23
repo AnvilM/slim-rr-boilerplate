@@ -11,6 +11,9 @@ use Slim\Factory\AppFactory;
 
 final readonly class ApplicationBootstrapper
 {
+    /**
+     * @return App<ContainerInterface>
+     */
     public static function createApp(ContainerInterface $container): App
     {
         $app = AppFactory::createFromContainer(

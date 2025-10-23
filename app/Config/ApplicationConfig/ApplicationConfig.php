@@ -25,7 +25,7 @@ final readonly class ApplicationConfig
 
     public static function appDebug(): bool
     {
-        return env("APP_DEBUG") ?? true;
+        return (bool)env("APP_DEBUG");
     }
 
     public static function displayErrorDetails(): bool

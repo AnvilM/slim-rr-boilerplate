@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Application\Commands\MakeMigrationCommand;
 
 use Application\Config\ApplicationConfig\ApplicationConfig;
+use InvalidArgumentException;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -23,7 +24,13 @@ final class MigrationGenerateCommand extends Command
 
     public function __invoke(InputInterface $input, OutputInterface $output): int
     {
-        copy(__DIR__ . '/Assets/ExampleMigration', ApplicationConfig::baseDir() . '/database/migrations/' . date('Ymd.His_') . $input->getArgument('name') . '.php');
+        $name = $input->getArgument('name');
+
+        if (!is_string($name)) {
+            throw new InvalidArgumentException('Argument "name" must be a string.');
+        }
+
+        copy(__DIR__ . '/Assets/ExampleMigration', ApplicationConfig::baseDir() . '/database/migrations/' . date('Ymd.His_') . $name . '.php');
 
         return Command::SUCCESS;
     }

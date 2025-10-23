@@ -9,6 +9,7 @@ use Psr\Container\ContainerInterface;
 
 final readonly class ContainerBootstrapper
 {
+    /** @param array<string, mixed> $providers */
     public static function createContainer(array $providers): ContainerInterface
     {
         return new Container(

@@ -10,6 +10,13 @@ use Cycle\Database\Config;
 final readonly class DatabaseConfig
 {
 
+    /**
+     * @return array{
+     *      default: string,
+     *      databases: array<string, array{connection: string}>,
+     *      connections: array<string, Config\SQLiteDriverConfig>
+     *  }
+     */
     public static function config(): array
     {
         return [
