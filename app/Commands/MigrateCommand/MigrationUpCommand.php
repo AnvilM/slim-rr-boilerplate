@@ -16,7 +16,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 
 #[AsCommand(name: 'migration:up', description: 'Migrate command')]
-final class MigrateCommand extends Command
+final class MigrationUpCommand extends Command
 {
     public function __construct(private readonly DatabaseManager $dbal, ?string $name = null)
     {

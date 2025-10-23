@@ -13,7 +13,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 
 #[AsCommand(name: 'migration:generate', description: 'Generate migration command')]
-final class MakeMigrationCommand extends Command
+final class MigrationGenerateCommand extends Command
 {
 
     protected function configure(): void

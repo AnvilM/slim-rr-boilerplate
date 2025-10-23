@@ -1,0 +1,24 @@
+<?php
+
+declare(strict_types=1);
+
+use Cycle\Migrations\Migration;
+
+class ExampleMigrationMigration extends Migration
+{
+    /**
+     * Create tables, add columns or insert data here
+     */
+    public function up(): void
+    {
+
+    }
+
+    /**
+     * Drop created, columns etc. here
+     */
+    public function down(): void
+    {
+    
+    }
+}
