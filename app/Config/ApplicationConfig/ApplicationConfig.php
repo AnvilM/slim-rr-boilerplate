@@ -28,9 +28,4 @@ final readonly class ApplicationConfig
         return (bool)env("APP_DEBUG");
     }
 
-    public static function displayErrorDetails(): bool
-    {
-        return self::appDebug();
-    }
-
 }

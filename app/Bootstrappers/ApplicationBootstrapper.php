@@ -25,7 +25,7 @@ final readonly class ApplicationBootstrapper
         $app->addBodyParsingMiddleware();
 
         $app->addErrorMiddleware(
-            ApplicationConfig::displayErrorDetails(),
+            ApplicationConfig::appDebug(),
             true,
             true
         );
