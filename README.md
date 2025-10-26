@@ -26,7 +26,7 @@ container, logging system, Object-Relational Mapping (ORM), database migrations,
 - **HTTP**: [nyholm/psr7](https://github.com/Nyholm/psr7)
 - **Logger**: [Monolog](https://seldaek.github.io/monolog/)
 - **ORM**: [CycleORM](https://cycle-orm.dev/)
-- **Migrations**: [Cycle Migrations](https://cycle-orm.dev/docs/migrations)
+- **Migrations**: [Cycle Migrations](https://cycle-orm.dev/docs/database-migrations/)
 - **CLI**: [Symfony Console](https://symfony.com/doc/current/components/console.html)
 - **Testing**: [PHPUnit](https://phpunit.de/)
 - **Static Analysis**: [PHPStan](https://phpstan.org/)
