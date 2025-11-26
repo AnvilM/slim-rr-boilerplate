@@ -28,9 +28,8 @@ final class ProvidersBootstrapper
     {
         return array_merge(
             ...array_map(
-                fn(string $provider) => $provider::register(),
-                self::$appProviders,
-                self::$providers
+                fn($provider) => $provider::register(),
+                array_merge(self::$appProviders, self::$providers)
             )
         );
     }
