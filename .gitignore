@@ -5,3 +5,5 @@ vendor
 logs
 
 composer.lock
+
+.env
