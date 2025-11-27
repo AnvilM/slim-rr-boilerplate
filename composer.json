@@ -12,7 +12,12 @@
   "autoload": {
     "psr-4": {
       "Application\\": "app/",
-      "Example\\": "src/"
+      "App\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
     }
   },
   "minimum-stability": "stable",
