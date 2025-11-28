@@ -3,5 +3,4 @@ parameters:
   paths:
     - src
     - app
-    - tests
   treatPhpDocTypesAsCertain: false
