@@ -28,7 +28,7 @@ container, logging system, Object-Relational Mapping (ORM), database migrations,
 - **ORM**: [CycleORM](https://cycle-orm.dev/)
 - **Migrations**: [Cycle Migrations](https://cycle-orm.dev/docs/database-migrations/)
 - **CLI**: [Symfony Console](https://symfony.com/doc/current/components/console.html)
-- **Testing**: [PHPUnit](https://phpunit.de/)
+- **Testing**: [Pest](https://pestphp.com/)
 - **Static Analysis**: [PHPStan](https://phpstan.org/)
 
 ## Getting Started
@@ -71,7 +71,7 @@ composer install
 ├── database/                     # Migrations and SQLite database files
 ├── logs/                         # Application logs
 ├── src/                          # Source code for custom logic
-├── tests/                        # PHPUnit tests
+├── tests/                        # Pest tests
 └── index.php                     # Entry point for RoadRunner
 ```
 
