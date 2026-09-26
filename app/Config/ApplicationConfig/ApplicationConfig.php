@@ -25,7 +25,9 @@ final readonly class ApplicationConfig
 
     public static function appDebug(): bool
     {
-        return (bool)env("APP_DEBUG");
+        $debug = env('APP_DEBUG');
+
+        return is_bool($debug) ? $debug : false;
     }
 
 }
